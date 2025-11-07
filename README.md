@@ -174,16 +174,16 @@ You should see your OrganMatch dashboard live! 🎉
 ## 🧾 Project Report & Demo
 
 📘 [**Download Project Report (PDF)**](docs/ProjectReport.pdf)  
-🎞️ [**Watch Demo Video**](https://drive.google.com/your-demo-video-link)  
-🧑‍🏫 [**View Presentation Slides (PPT)**](docs/OrganMatch_PPT.pptx)
+🎞️ [**Watch Demo Video**](https://drive.google.com/your-demo-video-link) 
 
 ---
+
 ## 👥 Team Members
 
-| Name | IAR No | Details |
-|------|--------|---------|
-| **Meet Mochi** | 14502 | B.Tech CE AI, Semester 5 |
-| **Disha Girase** | 14099 | B.Tech CE AI, Semester 5 |
+| Name         | Course   | Specialization | Semester | IAR No  |
+|--------------|---------|----------------|----------|---------|
+| Meet Mochi   | B.Tech CE |  AI          | 5        | 14502   |
+| Disha Girase | B.Tech CE |  AI          | 5        | 14099   |
 
 ---
 ## 📜 License
