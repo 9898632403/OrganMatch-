@@ -1,0 +1,723 @@
+/* 
+ * Recipient Page Styles - Scoped to .recipient-page
+ * Premium & Professional Design for Organ Recipients
+ */
+
+.recipient-page {
+  --primary-color: #D7263D;
+  --text-color: #2B2B2B;
+  --bg-cream: #F9F5EE;
+  --bg-beige: #E8DED1;
+  --bg-white: #FCFCFC;
+  --border-gray: #B8B8B8;
+  --text-coffee: #4B3F35;
+  
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg-white) 0%, var(--bg-cream) 100%);
+  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.recipient-page .max-w-6xl {
+  max-width: 1200px;
+}
+
+.recipient-page .max-w-4xl {
+  max-width: 896px;
+}
+
+.recipient-page .max-w-sm {
+  max-width: 384px;
+}
+
+.recipient-page .mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recipient-page .grid {
+  display: grid;
+}
+
+.recipient-page .lg\:grid-cols-2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .recipient-page .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.recipient-page .grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.recipient-page .gap-12 {
+  gap: 3rem;
+}
+
+.recipient-page .gap-4 {
+  gap: 1rem;
+}
+
+.recipient-page .gap-3 {
+  gap: 0.75rem;
+}
+
+.recipient-page .items-center {
+  align-items: center;
+}
+
+.recipient-page .items-start {
+  align-items: flex-start;
+}
+
+.recipient-page .justify-between {
+  justify-content: space-between;
+}
+
+.recipient-page .flex {
+  display: flex;
+}
+
+.recipient-page .relative {
+  position: relative;
+}
+
+.recipient-page .text-center {
+  text-align: center;
+}
+
+.recipient-page .text-right {
+  text-align: right;
+}
+
+.recipient-page .w-full {
+  width: 100%;
+}
+
+/* ========================================
+   SECTIONS
+   ======================================== */
+
+.recipient-page .section {
+  padding: 5rem 1.5rem;
+  position: relative;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.recipient-page .section:first-of-type {
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-cream) 100%);
+}
+
+.recipient-page .section:first-of-type::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(215, 38, 61, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(232, 222, 209, 0.4) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.recipient-page .section:first-of-type > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Typography */
+.recipient-page .text-4xl {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--text-coffee);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.recipient-page .text-3xl {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-coffee);
+  line-height: 1.2;
+}
+
+.recipient-page .text-2xl {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text-coffee);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.recipient-page .text-lg {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.recipient-page .text-sm {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.recipient-page .text-slate-700 {
+  color: var(--text-color);
+}
+
+.recipient-page .text-slate-600 {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.recipient-page .text-slate-500 {
+  color: var(--text-color);
+  opacity: 0.65;
+}
+
+.recipient-page .font-semibold {
+  font-weight: 600;
+}
+
+.recipient-page .font-medium {
+  font-weight: 500;
+}
+
+.recipient-page .mt-4 {
+  margin-top: 1rem;
+}
+
+.recipient-page .mt-6 {
+  margin-top: 1.5rem;
+}
+
+.recipient-page .mt-8 {
+  margin-top: 2rem;
+}
+
+.recipient-page .mt-2 {
+  margin-top: 0.5rem;
+}
+
+.recipient-page .mt-3 {
+  margin-top: 0.75rem;
+}
+
+.recipient-page .mb-8 {
+  margin-bottom: 2rem;
+}
+
+.recipient-page .mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+
+.recipient-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  border: none;
+  outline: none;
+}
+
+.recipient-page .btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.recipient-page .bg-indigo-600 {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #A11D2E 100%);
+}
+
+.recipient-page .text-white {
+  color: white;
+}
+
+.recipient-page .shadow {
+  box-shadow: 0 6px 24px rgba(215, 38, 61, 0.3);
+}
+
+.recipient-page .btn.bg-indigo-600:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(215, 38, 61, 0.4);
+}
+
+.recipient-page .btn.bg-indigo-600:active {
+  transform: translateY(0);
+}
+
+.recipient-page .border {
+  border: 2px solid var(--border-gray);
+  background: var(--bg-white);
+  color: var(--text-coffee);
+  box-shadow: 0 4px 16px rgba(43, 43, 43, 0.06);
+}
+
+.recipient-page .btn.border:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(215, 38, 61, 0.3);
+}
+
+.recipient-page .px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.recipient-page .py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.recipient-page .rounded-full {
+  border-radius: 50px;
+}
+
+/* ========================================
+   HERO FEATURE CARDS
+   ======================================== */
+
+.recipient-page .p-2 {
+  padding: 0.5rem;
+}
+
+.recipient-page .bg-emerald-50 {
+  background: rgba(215, 38, 61, 0.08);
+  color: var(--primary-color);
+}
+
+.recipient-page .bg-rose-50 {
+  background: rgba(232, 222, 209, 0.6);
+  color: var(--text-coffee);
+}
+
+.recipient-page .rounded-md {
+  border-radius: 8px;
+}
+
+/* ========================================
+   MATCH SCORE CARD
+   ======================================== */
+
+.recipient-page .bg-white {
+  background: var(--bg-white);
+}
+
+.recipient-page .rounded-2xl {
+  border-radius: 20px;
+}
+
+.recipient-page .shadow-lg {
+  box-shadow: 0 10px 40px rgba(43, 43, 43, 0.1);
+  border: 1px solid rgba(184, 184, 184, 0.3);
+}
+
+.recipient-page .p-8 {
+  padding: 2rem;
+}
+
+.recipient-page .h-2 {
+  height: 8px;
+}
+
+.recipient-page .bg-slate-100 {
+  background: var(--bg-beige);
+}
+
+.recipient-page .overflow-hidden {
+  overflow: hidden;
+}
+
+.recipient-page .h-full {
+  height: 100%;
+}
+
+.recipient-page .bg-gradient-to-r {
+  background: linear-gradient(90deg, var(--primary-color), var(--text-coffee));
+  border-radius: 4px;
+}
+
+/* ========================================
+   FORM SECTION
+   ======================================== */
+
+.recipient-page #register {
+  background: var(--bg-white);
+  padding: 6rem 1.5rem;
+}
+
+.recipient-page .form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-beige) 100%);
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(43, 43, 43, 0.1);
+  border: 1px solid rgba(184, 184, 184, 0.3);
+}
+
+.recipient-page .form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.recipient-page .form-field label {
+  font-weight: 600;
+  margin-bottom: 0.625rem;
+  color: var(--text-coffee);
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+}
+
+.recipient-page .form-field input,
+.recipient-page .form-field textarea,
+.recipient-page .form-field select {
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  border: 2px solid var(--border-gray);
+  outline: none;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: var(--bg-white);
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.recipient-page .form-field input:focus,
+.recipient-page .form-field textarea:focus,
+.recipient-page .form-field select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(215, 38, 61, 0.1);
+  background: var(--bg-white);
+}
+
+.recipient-page .form-field input::placeholder,
+.recipient-page .form-field textarea::placeholder {
+  color: var(--border-gray);
+  opacity: 0.8;
+}
+
+.recipient-page .form-field select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234B3F35' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 3rem;
+}
+
+.recipient-page .form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+.recipient-page .mt-4 {
+  margin-top: 1rem;
+}
+
+.recipient-page .py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.recipient-page .rounded-lg {
+  border-radius: 12px;
+}
+
+.recipient-page button[type="submit"] {
+  width: 100%;
+  padding: 1.125rem 2.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #A11D2E 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 24px rgba(215, 38, 61, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.recipient-page button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 35px rgba(215, 38, 61, 0.4);
+}
+
+.recipient-page button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   SUCCESS MESSAGE
+   ======================================== */
+
+.recipient-page .text-emerald-600 {
+  color: var(--primary-color);
+  background: rgba(215, 38, 61, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(215, 38, 61, 0.2);
+  font-weight: 600;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.recipient-page footer {
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-beige) 100%);
+  border-top: 1px solid var(--border-gray);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.recipient-page .bg-slate-50 {
+  background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-beige) 100%);
+}
+
+.recipient-page .border-t {
+  border-top: 1px solid var(--border-gray);
+}
+
+.recipient-page .border-slate-200 {
+  border-color: var(--border-gray);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1023px) {
+  .recipient-page .section:first-of-type {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+
+  .recipient-page .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .recipient-page .gap-12 {
+    gap: 2rem;
+  }
+
+  .recipient-page .grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipient-page .section:first-of-type {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+
+  .recipient-page .section {
+    padding: 3rem 1rem;
+  }
+
+  .recipient-page #register {
+    padding: 4rem 1rem;
+  }
+
+  .recipient-page .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .recipient-page .p-8 {
+    padding: 1.5rem;
+  }
+
+  .recipient-page .gap-4 {
+    gap: 0.75rem;
+  }
+
+  .recipient-page .btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipient-page .form-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .recipient-page .form-field {
+    margin-bottom: 1.25rem;
+  }
+
+  .recipient-page .form-field input,
+  .recipient-page .form-field textarea,
+  .recipient-page .form-field select {
+    padding: 0.75rem 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .recipient-page button[type="submit"] {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .recipient-page .text-4xl {
+    margin-bottom: 0.75rem;
+  }
+}
+
+/* ========================================
+   ENHANCED VISUAL ELEMENTS
+   ======================================== */
+
+/* Add subtle pulse animation to primary buttons */
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 0 6px 24px rgba(215, 38, 61, 0.3);
+  }
+  50% {
+    box-shadow: 0 6px 30px rgba(215, 38, 61, 0.4);
+  }
+}
+
+.recipient-page .btn.bg-indigo-600 {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+.recipient-page .btn.bg-indigo-600:hover {
+  animation: none;
+}
+
+/* Progress bar animation */
+.recipient-page .bg-gradient-to-r {
+  position: relative;
+  overflow: hidden;
+}
+
+.recipient-page .bg-gradient-to-r::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Form focus enhancements */
+.recipient-page .form-field input:focus,
+.recipient-page .form-field textarea:focus,
+.recipient-page .form-field select:focus {
+  transform: translateY(-1px);
+}
+
+/* Feature card hover effects */
+.recipient-page .flex.items-start.gap-3 {
+  transition: transform 0.3s ease;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.recipient-page .flex.items-start.gap-3:hover {
+  transform: translateX(4px);
+  background: rgba(215, 38, 61, 0.03);
+}
+
+/* Match score card enhancements */
+.recipient-page .shadow-lg {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recipient-page .shadow-lg:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 50px rgba(43, 43, 43, 0.12);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .recipient-page * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.recipient-page button:focus-visible,
+.recipient-page a:focus-visible,
+.recipient-page input:focus-visible,
+.recipient-page select:focus-visible,
+.recipient-page textarea:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .recipient-page .btn {
+    box-shadow: none;
+  }
+
+  .recipient-page .section {
+    padding: 2rem 1rem;
+  }
+
+  .recipient-page .form-container {
+    box-shadow: none;
+    border: 1px solid var(--border-gray);
+  }
+}
