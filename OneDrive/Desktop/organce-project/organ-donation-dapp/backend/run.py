@@ -10,7 +10,6 @@ from bson.errors import InvalidId
 
 app = Flask(__name__)
 
-# ✅ Full CORS setup
 CORS(
     app,
     supports_credentials=True,
@@ -28,7 +27,7 @@ def handle_preflight():
         headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization"
         return response
 
-# ---------- MongoDB Connection ----------
+#  MongoDB Connectio
 MONGO_URI = "mongodb+srv://attendance:meet24032005@attndance.szi0v3s.mongodb.net/attendance_db?retryWrites=true&w=majority&appName=attndance"
 client = MongoClient(MONGO_URI)
 
@@ -43,10 +42,10 @@ INFURA_URL = "https://sepolia.infura.io/v3/3e914a2a758140ada0c0a63650e080be"
 w3 = Web3(Web3.HTTPProvider(INFURA_URL))
 
 if w3.is_connected():
-    print("✅ Connected to Sepolia Testnet")
+    print(" Connected to Sepolia Testnet")
     print("Block Number:", w3.eth.block_number)
 else:
-    print("❌ Connection failed")
+    print(" Connection failed")
     
 CONTRACT_ADDRESS = "0x7E748046deF8Bb3eC7A0A68244FD8FbF13f109e8"
 
@@ -56,10 +55,10 @@ with open("../../blockchain/artifacts/contracts/OrganLedger.sol/OrganLedger.json
     contract_json = json.load(f)
     abi = contract_json["abi"]
 
-# 4️⃣ Create contract instance
+
 contract = w3.eth.contract(address=CONTRACT_ADDRESS, abi=abi)
 
-# 5️⃣ Example route to fetch something
+
 @app.route("/api/ledger-blockchain", methods=["GET"])
 def get_ledger_from_blockchain():
     try:
@@ -91,7 +90,7 @@ def add_ledger_to_blockchain():
         compatibility = data.get("compatibility", "N/A")
         timestamp = datetime.utcnow().isoformat()
 
-        # Admin wallet (⚠️ use test account only)
+        # Admin wallet ( use test account only)
         private_key = "YOUR_PRIVATE_KEY_HERE"
         admin_address = w3.eth.account.from_key(private_key).address
 
@@ -115,7 +114,7 @@ def add_ledger_to_blockchain():
     except Exception as e:
         return jsonify({"ok": False, "error": str(e)}), 500
    
-# ---------- Helpers ----------
+
 def now_iso():
     return datetime.utcnow().isoformat() + "Z"
 
@@ -137,7 +136,7 @@ def check_required(data, required_fields):
             missing.append(f)
     return missing
 
-# ---------- Basic Routes ----------
+
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "Welcome to the Donor-Recipient Backend API!", "ok": True}), 200
@@ -146,7 +145,7 @@ def home():
 def health_check():
     return jsonify({"ok": True, "message": "Backend is running!"}), 200
 
-# ---------- Donor Routes ----------
+# Donor Route
 @app.route("/api/donors", methods=["POST"])
 def add_donor():
     data = request.get_json() or {}
@@ -183,7 +182,7 @@ def get_all_donors():
     docs = [serialize_doc(d) for d in donors_col.find().sort("created_at", -1)]
     return jsonify({"ok": True, "donors": docs}), 200
 
-# ---------- Recipient Routes ----------
+#  Recipient Routes
 @app.route("/api/recipients", methods=["POST"])
 def add_recipient():
     data = request.get_json() or {}
@@ -211,7 +210,7 @@ def get_all_recipients():
     docs = [serialize_doc(d) for d in recipients_col.find().sort("created_at", -1)]
     return jsonify({"ok": True, "recipients": docs}), 200
 
-# ---------- Matches Routes ----------
+# Matches Routes
 @app.route("/api/matches", methods=["GET"])
 def get_matches():
     docs = list(matches_col.find().sort("created_at", -1))
@@ -267,7 +266,7 @@ def create_match_manual():
     match["_id"] = str(res.inserted_id)
     return jsonify({"ok": True, "message": "Match created", "match": match}), 201
 
-# ---------- Automated Matching ----------
+# - Automated Matching
 @app.route("/api/match/run", methods=["POST"])
 def run_matching():
     # Fetch only unmatched donors and recipients
@@ -339,7 +338,7 @@ def run_matching():
     
 
 
-# ---------- Ledger Routes ----------
+#  Ledger Routes 
 @app.route("/api/ledger", methods=["GET"])
 def get_ledger():
     docs = list(ledgers_col.find().sort("timestamp", -1))
@@ -348,7 +347,7 @@ def get_ledger():
         donor = donors_col.find_one({"_id": ObjectId(d.get("donorId"))})
         recipient = recipients_col.find_one({"_id": ObjectId(d.get("recipientId"))})
 
-        # ✅ Handles both "name" and "fullName"
+        
         d["donor"] = (donor.get("fullName") if donor else "Unknown Donor")
         d["recipient"] = (
             recipient.get("name") or recipient.get("fullName")
@@ -382,12 +381,12 @@ def get_blockchain_ledger():
 
         return jsonify(formatted_records)
     except Exception as e:
-        print("❌ Blockchain fetch error:", e)
+        print(" Blockchain fetch error:", e)
         return jsonify({"error": str(e)}), 500
 
 
 
-# ---------- Debug Utility ----------
+# Debug Utility
 @app.route("/api/debug/clear_all_demo", methods=["POST"])
 def clear_all_demo():
     donors_col.delete_many({})
@@ -431,7 +430,7 @@ def show_all_data():
         return jsonify(result), 200
 
     except Exception as e:
-        print("❌ Error in /api/debug/show_all:", e)
+        print(" Error in /api/debug/show_all:", e)
         return jsonify({"error": str(e)}), 500
 
 @app.route("/api/debug/run_match", methods=["GET"])
@@ -453,7 +452,7 @@ def contact_donor():
     if not donor:
         return jsonify({"error": "Donor not found"}), 404
 
-    # ✅ Return donor details (temporarily public)
+    #  Return donor details (temporarily public)
     return jsonify({
         "message": "Contact details fetched successfully",
         "donorName": donor.get("fullName", "N/A"),
@@ -462,7 +461,7 @@ def contact_donor():
         "city": donor.get("city", "N/A")
     })
 
-# ✅ Reset all donors & recipients to unmatched
+#  Reset all donors & recipients to unmatched
 @app.route("/api/debug/reset_match_flags", methods=["POST"])
 def reset_match_flags():
     try:
