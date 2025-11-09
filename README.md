@@ -175,8 +175,16 @@ You should see your OrganMatch dashboard live!
 
  [**Download Project Report**](OrganMatch_ProjectReport.docx)  
  [**Watch Demo Video**](OrganMatch_DemoVideo.mp4)
- 
- <sub>⚠️ If the video doesn’t preview online, click **“View raw”** to download and watch it locally.
+
+ ## 🎥 Demo Video Instructions
+
+To watch the **OrganMatch+ Demo Video**, follow these quick steps:
+
+1️⃣ **Click the video link above**  
+2️⃣ **Click “View raw”** at the top-right corner of the GitHub file page  
+3️⃣ **Wait for download to finish** → then open it to watch the full walkthrough of the DApp
+
+<sub>💡 *Tip: The video includes registration, donor–recipient matching demo and blockchain deployment.*</sub>
 
 ---
 
