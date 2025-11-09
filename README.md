@@ -1,18 +1,18 @@
-# 🧬 OrganMatch+ – A Blockchain-Based Secure Organ Donation Platform
+#  OrganMatch+ – A Blockchain-Based Secure Organ Donation Platform
 
 > **OrganMatch+** is a blockchain-powered decentralized application (DApp) that ensures transparency, trust, and security in the organ donation and transplantation process.  
 > It leverages smart contracts and decentralized ledgers to automate donor-recipient matching, eliminate data tampering, and promote ethical organ donation practices.
 
 ---
 
-## 📖 Overview
+##  Overview
 
 OrganMatch+ aims to solve the challenges of traditional organ donation systems — such as data manipulation, lack of transparency, and unauthorized access — by using blockchain technology.  
 Every donor and recipient record is securely stored in a **tamper-proof ledger**, verified through **smart contracts**, and managed in a **transparent decentralized network**.
 
 ---
 
-## 🎯 Aim
+##  Aim
 
 To develop a **secure, transparent, and decentralized organ donation system** using blockchain technology, ensuring ethical and reliable management of donor and recipient data.
 
@@ -20,27 +20,27 @@ To develop a **secure, transparent, and decentralized organ donation system** us
 
 ## ⚙️ Objectives
 
-- ✅ Ensure authenticity and transparency of donor and recipient data  
-- 🔒 Prevent data manipulation and unauthorized access  
-- 🤖 Automate donor-recipient matching using smart contracts  
-- 🏥 Provide a decentralized platform for hospitals and authorities  
-- 🌍 Promote ethical and fraud-free organ donation practices  
+- Ensure authenticity and transparency of donor and recipient data  
+-  Prevent data manipulation and unauthorized access  
+-  Automate donor-recipient matching using smart contracts  
+- Provide a decentralized platform for hospitals and authorities  
+- Promote ethical and fraud-free organ donation practices  
 
 ---
 
-## 🧠 Key Features
+## Key Features
 
 | Feature | Description |
 |----------|-------------|
-| 🧾 **Blockchain Ledger** | Stores all donor-recipient records immutably |
-| 🤝 **Smart Contracts** | Automates organ matching, approval, and verification |
-| 🔐 **Data Security** | Cryptographic security for all transactions |
-| 🏛️ **Decentralized Access** | Only verified hospitals & admins can update records |
-| 🪄 **Transparency** | Real-time traceability of organ donations |
+|  **Blockchain Ledger** | Stores all donor-recipient records immutably |
+| **Smart Contracts** | Automates organ matching, approval, and verification |
+|  **Data Security** | Cryptographic security for all transactions |
+|  **Decentralized Access** | Only verified hospitals & admins can update records |
+| **Transparency** | Real-time traceability of organ donations |
 
 ---
 
-## 🧩 System Architecture
+##  System Architecture
 
 **Architecture Flow:**
 
@@ -52,21 +52,21 @@ To develop a **secure, transparent, and decentralized organ donation system** us
 
 ---
 
-## 💻 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-------------|
 | **Blockchain Framework** | Ethereum / Hardhat |
 | **Smart Contract Language** | Solidity |
 | **Frontend** | React + Vite (HTML, CSS, JS) |
-| **Backend** | Node.js / Express.js + Python (run.py) |
+| **Backend** |  Python (run.py) |
 | **Storage** | IPFS for decentralized file/data storage |
 | **Wallet Integration** | MetaMask |
 | **Development Tools** | Remix IDE, Hardhat, Visual Studio Code |
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 | Folder / File | Description |
 |----------------|-------------|
@@ -78,13 +78,13 @@ To develop a **secure, transparent, and decentralized organ donation system** us
 
 ---
 
-## ⚙️ Setup & Installation Guide
+##  Setup & Installation Guide
 
 Follow the steps below to run the **OrganMatch+** project on your local machine.
 
 ---
 
-### 🧱 1️⃣ Prerequisites
+###   Prerequisites
 
 Before you begin, make sure you have these installed:
 
@@ -97,7 +97,7 @@ Before you begin, make sure you have these installed:
 
 ---
 
-### 📦 2️⃣ Clone the Repository
+###   Clone the Repository
 
 ```bash
 git clone https://github.com/9898632403/OrganMatch.git
@@ -110,7 +110,7 @@ npx hardhat node           # Start a local blockchain network
 npx hardhat run scripts/deploy.js --network localhost   # Deploy the contract
 
 ```
-### 📦 3️⃣ Setup Blockchain (Hardhat)
+###   Setup Blockchain (Hardhat)
 
 This folder contains the smart contracts for the project.
 
@@ -122,7 +122,7 @@ npx hardhat node           # Start a local blockchain network
 npx hardhat run scripts/deploy.js --network localhost   # Deploy the contract
 ```
 
-### 🧠 4️⃣ Setup Backend (Flask API)
+###   Setup Backend (Flask API)
 This handles server-side logic and connects the DApp to blockchain data.
 
 ```bash
@@ -131,7 +131,7 @@ pip install -r requirements.txt   # Install Python dependencies
 python run.py                     # Start Flask backend
 ```
 
-### 💻 5️⃣ Setup Frontend (React + Vite)
+###   Setup Frontend (React + Vite)
 This is your DApp interface for users (donors, recipients, hospitals).
 
 ```bash
@@ -140,7 +140,7 @@ npm install           # Install frontend dependencies
 npm run dev           # Start the React app
 ```
 
-### 🔐 6️⃣ Connect Metamask to Local Network
+###   Connect Metamask to Local Network
 Open Metamask → Networks → “Add Network”
 
 Use the following details:
@@ -155,7 +155,7 @@ Import one of the private keys shown in your Hardhat console.
 
 Refresh your DApp page — Metamask should now connect automatically.
 
-### ✅ 7️⃣ Run the DApp
+###   Run the DApp
 Once everything is running:
 
 Hardhat (Blockchain) → running
@@ -165,20 +165,20 @@ Flask (Backend) → running
 React (Frontend) → running
 
 Now open your browser and go to →
-👉 http://localhost:5173/
+ http://localhost:5173/
 
-You should see your OrganMatch dashboard live! 🎉
+You should see your OrganMatch dashboard live! 
 
 ---
 
 ## 🧾 Project Report & Demo
 
-📘 [**Download Project Report (PDF)**](docs/ProjectReport.pdf)  
-🎞️ [**Watch Demo Video**](https://drive.google.com/your-demo-video-link) 
+ [**Download Project Report (PDF)**](docs/ProjectReport.pdf)  
+ [**Watch Demo Video**](https://drive.google.com/your-demo-video-link) 
 
 ---
 
-## 👥 Team Members
+##  Team Members
 
 | Name         | Course   | Specialization | Semester | IAR No  |
 |--------------|---------|----------------|----------|---------|
@@ -186,11 +186,11 @@ You should see your OrganMatch dashboard live! 🎉
 | Disha Girase | B.Tech CE |  AI          | 5        | 14099   |
 
 ---
-## 📜 License
+##  License
 This project is open-source under the **MIT License**.
 
 ---
-## 🙏 Acknowledgments
+##  Acknowledgments
 - Special thanks to our project guide for guidance.
 - Resources: Hardhat, Remix, MetaMask, React Docs.
 
