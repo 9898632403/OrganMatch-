@@ -174,7 +174,9 @@ You should see your OrganMatch dashboard live!
 ## 🧾 Project Report & Demo
 
  [**Download Project Report**](OrganMatch_ProjectReport.docx)  
- [**Watch Demo Video**](OrganMatch_DemoVideo.mp4) 
+ [**Watch Demo Video**](OrganMatch_DemoVideo.mp4)
+ 
+ <sub>⚠️ If the video doesn’t preview online, click **“View raw”** to download and watch it locally.
 
 ---
 
