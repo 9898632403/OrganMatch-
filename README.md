@@ -173,7 +173,7 @@ You should see your OrganMatch dashboard live!
 
 ##  Project Report & Demo
 
- [**Download Project Report**](OrganMatch_ProjectReport.docx)  
+ [**Download Project Report**](OrganMatch_ProjectReport.pdf)  
  [**Watch Demo Video**](OrganMatch_DemoVideo.mp4)
 
  ##  Project Report & Demo Instructions
