@@ -183,8 +183,7 @@ You should see your OrganMatch dashboard live!
 To view or download the **OrganMatch+ Project Report** , follow these steps:
 
 1️. **Click the file link above**  
-2️. **Click “View raw”** on the GitHub file page  
-3️. **Wait for it to download**, then **open and view the document**
+2. View the report
 
 <sub>💡 *Tip: The report includes system design, screenshots, implementation details, and results.*</sub>
 
